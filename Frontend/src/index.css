@@ -1,0 +1,78 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Blob animation */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Glow animation */
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.animate-shine {
+  background: linear-gradient(
+    90deg,
+    theme("colors.blue.500") 0%,
+    theme("colors.purple.600") 25%,
+    theme("colors.blue.500") 50%,
+    theme("colors.purple.600") 75%,
+    theme("colors.blue.500") 100%
+  );
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+  background: #9e5ef7;
+  border-radius: 5px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9e5ef7;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #9e5ef7;
+  cursor: pointer;
+}
