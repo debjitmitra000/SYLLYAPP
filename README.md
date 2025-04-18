@@ -72,7 +72,7 @@ GOOGLE_API_KEY="your_google_api_key"
 GOOGLE_CX="your_google_custom_search_engine_id"
 CLIENT_SERVER=http://localhost:5173
 # 5. Start the backend server
-npm start
+npm run dev
 # 6. In a new terminal, navigate to the frontend directory
 cd ../Frontend
 # 7. Install frontend dependencies
